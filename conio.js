@@ -1,17 +1,4 @@
 
-/**
- * API
- * .start()
- * .stop()
- * .getWindowSize()
- * .clear()
- * .write()
- * .writeln()
- * .position(cb)
- * .goto(x, y)
- * .setMaxXY(x, y)
- */
-
 var ansi = require('ansi'),
     EventEmitter = require('events').EventEmitter;
 
