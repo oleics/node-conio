@@ -1,8 +1,8 @@
 {
   "name": "conio",
   "version": "0.0.0",
-  "private": true,
+  "private": false,
   "dependencies": {
-    "ansi": "*"
+    "ansi": "~0.1"
   }
 }
