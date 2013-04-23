@@ -4,12 +4,17 @@ var loremIpsum = require('lorem-ipsum');
 var conio = require('./conio')(),
     xy = conio.getWindowSize();
 
+conio.on('line', function(line) {
+  conio.writeln(line);
+});
+
+
 //conio.setMaxXY(xy[0], xy[1]);
 conio.setMaxXY(32, 32);
 
 setInterval(function() {
   conio.write(loremIpsum({count: 50}));
-},10000);
+}, 1);
 
 //for(var i=0; i<xy[0]; i++) {
 //  conio.write(i);

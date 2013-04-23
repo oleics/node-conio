@@ -55,7 +55,7 @@ function conio() {
           break;
         case 13: // Return
           pushToHistory(inputBuffer);
-          writeToOuptuBuffer(nl + prompt() + inputBuffer);
+          em.emit('line', inputBuffer);
           inputBuffer = '';
           displayRefresh();
           break;
@@ -201,6 +201,9 @@ function conio() {
     
     function pushToHistory(line) {
       if(line.length > 0) {
+        if(inputHistory.indexOf(line) !== -1) {
+          inputHistory.splice(inputHistory.indexOf(line), 1);
+        }
         inputHistory.push(line);
         inputHistoryPosition = inputHistory.length;
       }
