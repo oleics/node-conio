@@ -225,6 +225,10 @@ function conio() {
       return inputHistory[index];
     }
     
+    // Exports
+    
+    em.prompt = prompt;
+    
     return em.start();
   };
 }

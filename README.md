@@ -1,7 +1,14 @@
 
-# Install
+# conio
 
-# API
+
+## Install
+
+```
+npm install conio
+```
+
+## API
 
 .start()
 
@@ -21,7 +28,9 @@
 
 .setMaxXY(x, y)
 
-# MIT License
+.prompt([prompt])
+
+## MIT License
 
 Copyright (c) 2013 Oliver Leics <oliver.leics@gmail.com>
 
