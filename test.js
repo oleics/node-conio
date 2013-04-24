@@ -1,27 +1,23 @@
 
 var loremIpsum = require('lorem-ipsum');
 
-var conio = require('./conio')(),
-    xy = conio.getWindowSize();
+var conio = require('./conio')();
 
 conio.on('line', function(line) {
-  conio.writeln(line);
+  if(line === 'exit') {
+    conio.writeln();
+    conio.writeln('Good bye!');
+    process.exit();
+  } else {
+    conio.writeln();
+    conio.writeln(line);
+  }
 });
 
-
-//conio.setMaxXY(xy[0], xy[1]);
-conio.setMaxXY(32, 32);
-
 setInterval(function() {
-  conio.write(loremIpsum({count: 50}));
-}, 1);
-
-//for(var i=0; i<xy[0]; i++) {
-//  conio.write(i);
-//}
-//conio.writeln();
+  conio.writeln(loremIpsum({count: 10}));
+}, 20000);
 
 conio.writeln(loremIpsum({count: 5}));
-conio.position(function(){});
-//conio.position(console.log);
-//conio.clear();
+
+conio.position(console.log);
